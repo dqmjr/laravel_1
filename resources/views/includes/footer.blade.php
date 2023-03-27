@@ -1,3 +1,5 @@
 <footer class="py-1 border-top">
-    Footer
+    <p>
+        c Lorem ipsum {{ date('Y') }}
+    </p>
 </footer>
