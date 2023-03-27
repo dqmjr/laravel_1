@@ -20,6 +20,7 @@ class BlogController extends Controller
     }
     public function show($post)
     {
+
         $post = (object) [
             'id' => 1,
             'title' => 'Lorem',
