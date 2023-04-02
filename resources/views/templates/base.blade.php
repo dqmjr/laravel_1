@@ -13,7 +13,6 @@
         .required:after {
             content: '*';
             color: red;
-            margin-left: 3px;
         }
     </style>
     <title>@yield('page.title', config('app.name'))</title>
