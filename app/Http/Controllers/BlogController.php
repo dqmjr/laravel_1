@@ -18,12 +18,13 @@ class BlogController extends Controller
 
         return view('blog.index', compact('posts'));
     }
+
     public function show($post)
     {
 
         $post = (object) [
             'id' => 1,
-            'title' => 'Lorem',
+            'title' => '1ый пост',
             'text' => 'lorem ipsum dolor set amet',
         ];
         $posts = array_fill(0, 5, $post);

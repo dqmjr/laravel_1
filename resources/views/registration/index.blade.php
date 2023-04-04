@@ -6,9 +6,12 @@
             <x-card-title>
                 {{ __('Регистрация') }}
             </x-card-title>
+            <x-slot name="right">
+                <a href="{{ route('login.index') }}">{{ __('Вход') }}</a>
+            </x-slot>
         </x-card-header>
         <x-card-body>
-            <x-form action="{{ route('login.store') }}" method="POST">
+            <x-form action="{{ route('register.store') }}" method="POST">
                 <x-form-item>
                     <x-label required>
                         {{ __('ФИО') }}
@@ -39,7 +42,7 @@
                     </x-checkbox>
                 </x-form-item>
                 <x-button type="submit" color="primary">
-                    {{ __('Войти') }}
+                    {{ __('Регистрация') }}
                 </x-button>
             </x-form>
         </x-card-body>

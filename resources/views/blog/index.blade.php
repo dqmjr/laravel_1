@@ -1,25 +1,25 @@
-@extends('templates.base')
-@section('content')
-    <h1>
-        Posts list
-    </h1>
+@extends('templates.main')
+
+@section('main.content')
+    <x-title>
+        {{ __('Posts list') }}
+    </x-title>
+
     <div>
         @if(empty($posts))
-           <p>Empty</p>
+            {{ __('Empty') }}
         @else
-            @foreach($posts as $post)
-                <div>
-                    <a href="{{ route('blog.show', $post->id) }}">
-                        <h6>
-                            {{ $post->title }}
-                        </h6>
-                    </a>
-                    <p>
-                        {{ $post->text }}
-                    </p>
-                </div>
-
-            @endforeach
+            <div class="row">
+                @foreach($posts as $post)
+                    <div class="col-12 col-md-4">
+                        <x-card>
+                            <x-card-body>
+                                <x-post.card :post="$post"/>
+                            </x-card-body>
+                        </x-card>
+                    </div>
+                @endforeach
+            </div>
         @endif
     </div>
 @endsection

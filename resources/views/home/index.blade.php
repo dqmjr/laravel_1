@@ -1,6 +1,6 @@
-@extends('templates.base')
-@section('content')
-    <h1>
-        Main
-    </h1>
+@extends('templates.main')
+@section('main.content')
+    <div class="text-center">
+        <h2>Main page</h2>
+    </div>
 @endsection
