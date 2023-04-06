@@ -5,7 +5,17 @@
         </div>
     @endisset
 
-    <h2 class="mb-5">
-        {{ $slot }}
-    </h2>
+    <div class="d-flex justify-content-between">
+        <div>
+            <h2 class="mb-4 pb-2 border-bottom">
+                {{ $slot }}
+            </h2>
+        </div>
+        @isset($right)
+            <div>
+                {{ $right }}
+            </div>
+        @endisset
+    </div>
+
 </div>

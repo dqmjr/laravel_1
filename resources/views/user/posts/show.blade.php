@@ -2,9 +2,7 @@
 
 @section('main.content')
     <x-title>
-        <div class="border-bottom">
-            {{ $post->title }}
-        </div>
+        {{ $post->title }}
     </x-title>
 
     <div>
