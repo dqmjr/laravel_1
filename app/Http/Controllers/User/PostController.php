@@ -36,6 +36,11 @@ class PostController extends Controller
     }
     public function edit($post)
     {
+        $post = (object) [
+            'id' => 1,
+            'title' => '1ый пост',
+            'text' => 'lorem ipsum dolor set amet',
+        ];
         return view('user.posts.edit', compact('post'));
     }
 }

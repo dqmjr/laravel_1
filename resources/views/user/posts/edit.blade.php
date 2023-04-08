@@ -6,13 +6,14 @@
     </x-link>
 
     <x-title>
-        {{ __('Создать пост') }}
+        {{ __('Изменить пост') }}
     </x-title>
 
-    <x-post.form />
+    <x-post.form :post="$post" />
+
     <x-button>
-        {{ __('Создать пост') }}
+        {{ __('Изменить пост') }}
     </x-button>
 
-    <x-trix action="{{ route('user.posts.store') }}" />
+    <x-trix action="{{ route('user.posts.update', $post->id) }}" />
 @endsection
