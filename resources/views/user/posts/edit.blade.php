@@ -1,19 +1,15 @@
 @extends('templates.main')
 
 @section('main.content')
-    <x-link href="{{ route('user.posts.index') }}">
-        {{ __('Назад') }}
-    </x-link>
-
     <x-title>
         {{ __('Изменить пост') }}
+        <x-slot name="link">
+            <a href="{{ route('user.posts.show', $post->id) }}">
+                {{ __('Назад') }}
+            </a>
+        </x-slot>
     </x-title>
 
-    <x-post.form :post="$post" />
+    <x-post.form action="{{ route('user.posts.update', $post->id) }}" method="put" :post="$post" />
 
-    <x-button>
-        {{ __('Изменить пост') }}
-    </x-button>
-
-    <x-trix action="{{ route('user.posts.update', $post->id) }}" />
 @endsection
