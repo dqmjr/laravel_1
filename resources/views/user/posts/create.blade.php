@@ -10,9 +10,6 @@
     </x-title>
 
     <x-post.form />
-    <x-button>
-        {{ __('Создать пост') }}
-    </x-button>
 
     <x-trix action="{{ route('user.posts.store') }}" />
 @endsection

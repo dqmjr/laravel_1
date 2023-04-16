@@ -44,13 +44,18 @@ class PostController extends Controller
         return view('user.posts.edit', compact('post'));
     }
     public function store(Request $request) {
-        $title = $request->title;
+        $title = $request->input('title');
+        $text = $request->input('text');
 
-        dd($title);
+        dd($title, $text);
+        return 'store method';
     }
     public function update (Request $request) {
         $title = $request->input('title');
+        $text = $request->input('text');
 
-        dd($title);
+        dd($title, $text);
+
+        return 'update method';
     }
 }
